@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service  
 metadata:
-   name: nginx
+   name: nginxnodeport
    labels:
       app: nginx
 spec:
   selector:    #selects the pods with label matches app=nginx
      app: nginx  
-     
-  #type can be mentioned with in spec block, when not mentioned default behaviour is clusterIP
+  type: NodePort
   ports:
     - port: &target 80
       name: http

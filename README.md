@@ -1,6 +1,6 @@
 # Kubernetes Service Object
 
-Service object of the kubernetes helps in service discory
+Service object helps in service discovery.
 
 Service discovery tools help solve the problem of finding which processes are listening at which addresses for which services. A good service discovery system will enable users to resolve this information quickly and reliably. 
 

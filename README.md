@@ -48,6 +48,7 @@ $ kubectl apply -f svc-clusteIP.yml
 
 service/nginx created
 
+
 $ kubectl get svc
 
 NAME           TYPE            CLUSTER-IP         EXTERNAL-IP    PORT(S)            AGE
@@ -63,6 +64,7 @@ NodePort
 $ kubectl apply -f svc-NodePort.yml 
 
 service/nginxnodeport created
+
 
 $ kubectl get svc
 

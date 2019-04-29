@@ -56,6 +56,7 @@ kubernetes   ClusterIP   10.59.240.1     <none>        443/TCP          1h
 
 nginx        ClusterIP   10.59.242.238   <none>        80/TCP,443/TCP   6s
 
+
 NodePort
 --------
 

@@ -47,7 +47,7 @@ service/nginx created
 
 $ kubectl get svc
 
-NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+NAME           TYPE            CLUSTER-IP         EXTERNAL-IP    PORT(S)            AGE
 
 kubernetes   ClusterIP   10.59.240.1     <none>        443/TCP          1h
 

@@ -20,6 +20,7 @@ Exposes the service externally using a cloud provider’s load balancer. NodePor
 
 ExternalName:
 ------------
+In production situations, you will likely want to use ExternalName, which maps the service to a CNAME record such as a Fully Qualified Domain Name.
 Maps the service to the contents of the externalName field (e.g. foo.bar.example.com), by returning a CNAME record with its value.
 
 Service Discovery:
@@ -30,4 +31,26 @@ There are two ways to discover service in kubernetes. By ENV variable or DNS.
 ENV Var – When a Pod is run on a Node, the kubelet adds a set of environment variables for each active Service.
 
 DNS – The DNS server is a cluster add-on that watches the Kubernetes API for new Services and creates a set of DNS records for each. If DNS has been enabled throughout the cluster then all Pods should be able to do name resolution of Services automatically. This is the recommended option.
+
+
+
+
+
+
+
+
+Lab:
+===
+
+$ kubectl apply -f cluster-ip-svc.yml
+
+service/nginx created
+
+$ kubectl get svc
+
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+
+kubernetes   ClusterIP   10.59.240.1     <none>        443/TCP          1h
+
+nginx        ClusterIP   10.59.242.238   <none>        80/TCP,443/TCP   6s
 

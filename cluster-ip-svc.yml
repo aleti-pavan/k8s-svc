@@ -1,12 +1,12 @@
 apiVersion: v1
-kind: Service
+kind: Service  
 metadata:
    name: nginx
    labels:
       app: nginx
 spec:
-  selector:
-     app: nginx
+  selector:    #selects the pods with label matches app=nginx
+     app: nginx  #type can be mentioned with in selector block, when not mentioned default behaviour is clusterIP
   ports:
     - port: &target 80
       name: http

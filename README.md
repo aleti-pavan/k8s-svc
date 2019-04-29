@@ -41,7 +41,7 @@ DNS – The DNS server is a cluster add-on that watches the Kubernetes API for n
 Lab:
 ===
 
-$ kubectl apply -f cluster-ip-svc.yml
+$ kubectl apply -f svc-clusteIP.yml 
 
 service/nginx created
 

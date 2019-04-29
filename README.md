@@ -20,8 +20,7 @@ Exposes the service externally using a cloud provider’s load balancer. NodePor
 
 ExternalName:
 ------------
-In production situations, you will likely want to use ExternalName, which maps the service to a CNAME record such as a Fully Qualified Domain Name.
-Maps the service to the contents of the externalName field (e.g. foo.bar.example.com), by returning a CNAME record with its value.
+In production situations, you will likely want to use ExternalName, which maps the service to a CNAME record such as a Fully Qualified Domain Name. (e.g. foo.bar.example.com), by returning a CNAME record with its value.
 
 Service Discovery:
 =================

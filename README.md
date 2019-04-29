@@ -41,6 +41,9 @@ DNS – The DNS server is a cluster add-on that watches the Kubernetes API for n
 Lab:
 ===
 
+ClusterIP
+---------
+
 $ kubectl apply -f svc-clusteIP.yml 
 
 service/nginx created
@@ -52,4 +55,21 @@ NAME           TYPE            CLUSTER-IP         EXTERNAL-IP    PORT(S)        
 kubernetes   ClusterIP   10.59.240.1     <none>        443/TCP          1h
 
 nginx        ClusterIP   10.59.242.238   <none>        80/TCP,443/TCP   6s
+
+NodePort
+--------
+
+$ kubectl apply -f svc-NodePort.yml 
+
+service/nginxnodeport created
+
+$ kubectl get svc
+
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+
+kubernetes      ClusterIP   10.59.240.1     <none>        443/TCP                      2h
+
+nginx           ClusterIP   10.59.255.45    <none>        80/TCP,443/TCP               4m
+
+nginxnodeport   NodePort    10.59.248.126   <none>        80:31558/TCP,443:32557/TCP   5s
 

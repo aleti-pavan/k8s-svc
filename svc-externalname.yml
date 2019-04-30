@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-externalname
+  #namespace: prod  #This is only when you have namespaces
+spec:
+  type: ExternalName
+  externalName: my.database.example.com
+  ports:
+   - port: 3000

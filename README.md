@@ -76,3 +76,20 @@ nginx           ClusterIP   10.59.255.45    <none>        80/TCP,443/TCP        
 
 nginxnodeport   NodePort    10.59.248.126   <none>        80:31558/TCP,443:32557/TCP   5s
 
+
+LoadBalancer:
+------------
+
+$ kubectl apply -f svc-LoadBalancer.yml
+
+service/nginx-loadbalancer created
+
+
+$ kubectl get svc
+
+NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)                      AGE
+
+kubernetes           ClusterIP      10.59.240.1     <none>          443/TCP                      38m
+
+nginx-loadbalancer   LoadBalancer   10.59.255.249   35.204.81.198   80:30870/TCP,443:32684/TCP   13m
+

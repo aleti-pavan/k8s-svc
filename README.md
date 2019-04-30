@@ -93,3 +93,21 @@ kubernetes           ClusterIP      10.59.240.1     <none>          443/TCP     
 
 nginx-loadbalancer   LoadBalancer   10.59.255.249   35.204.81.198   80:30870/TCP,443:32684/TCP   13m
 
+
+ExternalName:
+------------
+
+$ kubectl apply -f svc-externalname.yml 
+
+service/nginx-externalname created
+
+
+$ kubectl get svc
+
+NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP               PORT(S)                      AGE
+
+kubernetes           ClusterIP      10.59.240.1     <none>                    443/TCP                      1h
+
+nginx-externalname   ExternalName   <none>          my.database.example.com   3000/TCP                     3m
+
+nginx-loadbalancer   LoadBalancer   10.59.242.210   35.204.81.198             80:32195/TCP,443:30803/TCP   2m

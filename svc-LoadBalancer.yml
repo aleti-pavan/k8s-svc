@@ -1,9 +1,11 @@
 apiVersion: v1
 kind: Service  
 metadata:
-   name: nginxnodeport
+   name: nginx-loadbalancer
    labels:
       app: nginx
+    annotations:
+      cloud.google.com/load-balancer-type: "Internal"
 spec:
   selector:    #selects the pods with label matches app=nginx
      app: nginx  

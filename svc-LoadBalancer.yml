@@ -4,8 +4,11 @@ metadata:
    name: nginx-loadbalancer
    labels:
       app: nginx
-    annotations:
-      cloud.google.com/load-balancer-type: "Internal"
+   annotations:
+    # type Internal creates internal loadbalancer
+    # type External creates external loadbalancer
+      #cloud.google.com/load-balancer-type: "Internal"
+      cloud.google.com/load-balancer-type: "External"
 spec:
   selector:    #selects the pods with label matches app=nginx
      app: nginx  

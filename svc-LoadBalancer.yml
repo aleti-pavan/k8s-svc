@@ -8,7 +8,7 @@ spec:
   selector:    #selects the pods with label matches app=nginx
      app: nginx  
   #	setting the type as NodePort
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: &target 80
       name: http
